@@ -11,7 +11,7 @@ angular.module('LunchCheck', [])
 
     $scope.displayNumItems = function () {
       var items = calcItems($scope.user_input);
-      if (items == 1) {
+      if (items == 0) {
         $scope.message = "Please enter data first."
       } else if (items <= 3) {
         $scope.message = "Enjoy!";
