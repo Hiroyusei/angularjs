@@ -1,11 +1,15 @@
 (function () {
 'use strict';
 
+// Create App
 angular.module('LunchCheck', [])
+//Create Controller， (kind of like the constructor)
 .controller('LunchCheckController', LunchCheckController);
 
   LunchCheckController.$inject = ['$scope'];
+
   function LunchCheckController($scope) {
+    //define $scope properties
     $scope.user_input = "";
     $scope.message = "";
 
@@ -20,6 +24,7 @@ angular.module('LunchCheck', [])
       }
     };
 
+    //Helper function
     function calcItems(string) {
       //Get rids of all white spaces
       string = string.replace(/\s/g,"");
